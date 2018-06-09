@@ -5,7 +5,7 @@
 # Template: app
 # Command: /usr/lib/x86_64-linux-gnu/qt4/bin/qmake RELEASE=1 -o Makefile Lomeli-qt.pro
 #############################################################################
- 
+
 ####### Compiler, tools and options
 
 CC            = gcc
