@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x9f307584caaa636c2684d2d1180c320e79623839850f483362a8c561c1c63637");
+uint256 hashGenesisBlock("0x11f27a67e5705bb6b67c22065a732257c9a8c6c8ac00e3ba12dcc7885e2d2df1");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Lomeli: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2751,7 +2751,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xf9;
         pchMessageStart[2] = 0x7d;
         pchMessageStart[3] = 0x11;
-        hashGenesisBlock = uint256("0x2b77d700e894eedb833444105264a9912d212fabf491fd6377c0f5407f674269");
+        hashGenesisBlock = uint256("0x");
     }
 
     //
@@ -2784,26 +2784,26 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "Yo soy miguel lomeli";
+        const char* pszTimestamp = "The times of LomeliCoin";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("20ca85d7ccd7c725440b0168096697ce43d64f236971134a91d20e7e5e0437345c5c27d029a70eac006a170217e89d26cd87e191c734454477dd275f3ece4487b5") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("047538cb335fb1ae8452c0e3bd3d0c412ceb9f4c21e720eadcc2e4582e253d49684f2c8b773e47e6e3b0f88ecb119e6ad8ea25ca1e8d8fd5c50b015167907de456") << OP_CHECKSIG;
         CBlock block;
         block.vtx.push_back(txNew);
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1528569564;
+        block.nTime    = 1525380046;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2891065365;
+        block.nNonce   = 1211383;
 
         if (fTestNet)
         {
-            block.nTime    = 1528569564;
-            block.nNonce   = 2132803710;
+            block.nTime    = 1317798646;
+            block.nNonce   = 385270584;
         }
 
         //// debug print
