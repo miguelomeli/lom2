@@ -13,7 +13,7 @@ src/test_lomeli
 
 # Compilation and Qt preprocessor part
 *.qm
-#Makefile
+Makefile
 lomeli-qt
 Lomeli-Qt.app
 
@@ -31,4 +31,4 @@ qrc_*.cpp
 .DS_Store
 #build
 
-#!src/leveldb*/Makefile
+!src/leveldb*/Makefile
