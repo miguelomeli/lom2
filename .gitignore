@@ -1,0 +1,34 @@
+src/*.exe
+src/lomeli
+src/lomelid
+src/test_lomeli
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.lomeli
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+lomeli-qt
+Lomeli-Qt.app
+
+# Unit-tests
+Makefile.test
+lomeli-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb*/Makefile
